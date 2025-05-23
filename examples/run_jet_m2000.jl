@@ -85,7 +85,7 @@ scheme = Scheme(solver, degree, solution_points, correction_function,
 param = Parameters(grid_size, cfl, bounds, save_iter_interval,
                    save_time_interval, compute_error_interval,
                    cfl_safety_factor = cfl_safety_factor,
-                   saveto = joinpath(@__DIR__, "output_m2000"))
+                   saveto = joinpath(@__DIR__, "..", "output_m2000"))
 #------------------------------------------------------------------------------
 sol = Tenkai.solve(equation, problem, scheme, param)
 
