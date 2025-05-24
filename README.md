@@ -3,7 +3,7 @@
 In order to generate the results from this repository, you need to install `julia`. We recommend using `juliaup`, as detailed in the official website [https://julialang.org](https://julialang.org). The results have been generated using `julia` version 1.10.8, and we recommend installing the same. Once you have installed `julia`, you can clone this repository, enter this directory and start `julia` with the following steps
 ```shell
 git clone https://github.com/Arpit-Babbar/2025_paper_lw_ad.git
-cd paper_2025_lw_ad
+cd 2025_paper_lw_ad
 julia --project=.
 ```
 Then enter the following commands to generate all the results
