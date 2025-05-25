@@ -74,7 +74,7 @@ problem = Problem(domain,
                   initial_value,
                   boundary_value, boundary_condition,
                   final_time, exact_solution)
-blend = setup_limiter_blend(blend_type = MH,
+blend = setup_limiter_blend(blend_type = FO,
                             indicating_variables = Eq.rho_p_indicator!,
                             reconstruction_variables = conservative_reconstruction,
                             indicator_model = "gassner",
