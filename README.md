@@ -1,5 +1,8 @@
 # Automatic differentiation for Lax-Wendroff-type discretizations
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/DOI/TODO.svg)](https://zenodo.org/doi/TODO)
+
 In order to generate the results from this repository, you need to install `julia`. We recommend using `juliaup`, as detailed in the official website [https://julialang.org](https://julialang.org). The results have been generated using `julia` version 1.10.8, and we recommend installing the same. Once you have installed `julia`, you can clone this repository, enter this directory and start `julia` with the following steps
 ```shell
 git clone https://github.com/Arpit-Babbar/2025_paper_lw_ad.git
