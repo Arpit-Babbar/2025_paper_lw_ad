@@ -1,21 +1,35 @@
 # Automatic differentiation for Lax-Wendroff-type discretizations
 
 In order to generate the results from this repository, you need to install `julia`. We recommend using `juliaup`, as detailed in the official website [https://julialang.org](https://julialang.org). The results have been generated using `julia` version 1.10.8, and we recommend installing the same. Once you have installed `julia`, you can clone this repository, enter this directory and start `julia` with the following steps
+
 ```shell
 git clone https://github.com/Arpit-Babbar/2025_paper_lw_ad.git
 cd 2025_paper_lw_ad
 julia --project=.
 ```
+
 Then enter the following commands to generate all the results
+
 ```julia
 julia> import Pkg; Pkg.instantiate() # Does not need to be re-run the next time you enter the REPL
 julia> include("generate_all.jl") # Generate all data, postprocess 1D profiles and convergence plots
 julia> include("plotting/plot_wct.jl") # See wall clock time performance comparing ALW and AD on screen
 ```
+
+You should start Julia with a single thread to get reliable timings.
+You can do this by running `julia --project=. --threads=1` in the shell.
+However, the last command in `generate_all.jl` (the Mach 2000 jet flow)
+can take quite a while if using a single thread. Thus, you can also execute
+the first few commands in `generate_all.jl` in serial, start Julia again
+with multiple threads (e.g., `julia --project=. --threads=auto`), and then
+run the last command in `generate_all.jl` to generate the Mach 2000 jet flow.
+
 If you wish to visualize the 2D figure, you need `paraview` and its command line version `pvpython`. Then, in your shell, you can run
+
 ```shell
 pvpython m2000.py
 ```
+
 All the figures are now ready and available in the following locations:
 1. Double rarefaction test: `paper_figures/isentropic/density.pdf`
 2. RHD first Riemann problem: `paper_figures/rhd/density.pdf`
