@@ -2,7 +2,7 @@
 
 julia_version = "1.10.8"
 manifest_format = "2.0"
-project_hash = "df4664a6f6456cb43ed34e9a065766687d65a27e"
+project_hash = "dce30997d7f9152542f14da14c225ce0a06a5095"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "e2478490447631aedba0823d4d7a80b2cc8cdb32"
@@ -1721,7 +1721,7 @@ version = "1.10.0"
 [[deps.Tenkai]]
 deps = ["DelimitedFiles", "DiffEqCallbacks", "ElasticArrays", "EllipsisNotation", "FLoops", "FastGaussQuadrature", "FileIO", "GZip", "HDF5", "JSON3", "LinearAlgebra", "LoopVectorization", "MuladdMacro", "OffsetArrays", "OrdinaryDiffEqSSPRK", "OrdinaryDiffEqTsit5", "Plots", "Polyester", "Printf", "Roots", "SimpleUnPack", "StaticArrays", "Test", "TimerOutputs", "TowerOfEnzyme", "TrixiBase", "UnPack", "WriteVTK"]
 git-tree-sha1 = "640a21e8bd7f91948c656242dfa3276fd9d5836b"
-repo-rev = "master"
+repo-rev = "ad_paper"
 repo-url = "https://github.com/Arpit-Babbar/Tenkai.jl"
 uuid = "a4f5eaf3-cc41-4395-bb6a-2b58fc770896"
 version = "0.1.0"

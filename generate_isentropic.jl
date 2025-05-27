@@ -1,5 +1,4 @@
 import Pkg
-# Activate TenkaiAD environment (TODO - can we include it instead?)
 Pkg.activate(joinpath(@__DIR__, "."))
 using Tenkai
 using TrixiBase

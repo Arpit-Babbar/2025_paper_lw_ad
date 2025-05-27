@@ -133,7 +133,7 @@ function correct_variable_bound_limiter!(variable::typeof(density), eq::Abstract
     @unpack Vl, Vr = op
     nx = grid.size
     nd = op.degree + 1
-    eps = 1e-10 # TODO - Get a better one
+    eps = 1e-10
     for element in 1:nx
         var_ll = var_rr = 0.0
         var_min = 1e20
