@@ -30,8 +30,6 @@ plot_solns(files, labels, outdir = joinpath(figures_dir, "isentropic"),
            exact_line_width = 2.5, soln_line_width = 2.5,
            plt_type = "cts_avg")
 
-# TODO - Need to fix this (It is prolly due to badly written code in EqRHD1D_geos_1v_comp.jl)
-# It is also fixed by using TaylorDiff.jl
 Tenkai.Enzyme.API.strictAliasing!(false)
 
 rhd_dir = "RHD1D_RyuRP_P1"
