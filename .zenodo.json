@@ -1,0 +1,28 @@
+{
+    "license": "MIT",
+    "title": "Reproducibility repository for the paper Automatic differentiation for Lax-Wendroff-type discretizations",
+    "upload_type": "software",
+    "creators": [
+        {
+            "affiliation": "Institute of Mathematics, Johannes Gutenberg University Mainz, Germany",
+            "name": "Babbar, Arpit",
+            "orcid": "0000-0002-9453-370X"
+        },
+        {
+            "affiliation": "Institute of Mathematics, Johannes Gutenberg University Mainz, Germany and High-Performance Scientific Computing, University of Augsburg, Germany",
+            "name": "Churavy, Valentin",
+            "orcid": "0000-0002-9033-165X"
+        },
+        {
+            "affiliation": "High-Performance Scientific Computing, University of Augsburg, Germany",
+            "name": "Schlottke-Lakemper, Michael",
+            "orcid": "0000-0002-3195-2536"
+        },
+        {
+            "affiliation": "Institute of Mathematics, Johannes Gutenberg University Mainz, Germany",
+            "name": "Ranocha, Hendrik",
+            "orcid": "0000-0002-3456-2277"
+        }
+    ],
+    "access_right": "open"
+}

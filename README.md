@@ -1,6 +1,47 @@
 # Automatic differentiation for Lax-Wendroff-type discretizations
 
-In order to generate the results from this repository, you need to install `julia`. We recommend using `juliaup`, as detailed in the official website [https://julialang.org](https://julialang.org). The results have been generated using `julia` version 1.10.8, and we recommend installing the same. Once you have installed `julia`, you can clone this repository, enter this directory and start `julia` with the following steps
+[![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/DOI/TODO.svg)](https://zenodo.org/doi/TODO)
+
+This repository contains information and code to reproduce the results
+presented in the article
+```bibtex
+@online{babbar2025automatic,
+  title={Automatic differentiation for {L}ax-{W}endroff-type discretizations},
+  author={TODO},
+  year={2025},
+  eprint={TODO},
+  eprinttype={arxiv},
+  eprintclass={math.NA}
+}
+```
+
+If you find these results useful, please cite the article mentioned above.
+If you use the implementations provided here, please **also** cite this
+repository as
+```bibtex
+@misc{babbar2025automaticRepro,
+  title={Reproducibility repository for
+         "Automatic differentiation for {L}ax-{W}endroff-type
+         discretizations"},
+  author={TODO},
+  year={2025},
+  howpublished={\url{https://github.com/Arpit-Babbar/2025_paper_lw_ad}},
+  doi={TODO}
+}
+```
+
+## Abstract
+
+TODO
+
+
+## Numerical experiments
+
+In order to generate the results from this repository, you need to install [Julia](https://julialang.org).
+We recommend using `juliaup`, as detailed in the official website [https://julialang.org](https://julialang.org).
+
+The results have been generated using Julia version 1.10.8, and we recommend installing the same. Once you have installed Julia, you can clone this repository, enter this directory and start the executable `julia` with the following steps
 ```shell
 git clone https://github.com/Arpit-Babbar/2025_paper_lw_ad.git
 cd 2025_paper_lw_ad
@@ -12,7 +53,7 @@ julia> import Pkg; Pkg.instantiate() # Does not need to be re-run the next time 
 julia> include("generate_all.jl") # Generate all data, postprocess 1D profiles and convergence plots
 julia> include("plotting/plot_wct.jl") # See wall clock time performance comparing ALW and AD on screen
 ```
-If you wish to visualize the 2D figure, you need `paraview` and its command line version `pvpython`. Then, in your shell, you can run
+If you wish to visualize the 2D figure, you need [ParaView](https://www.paraview.org) and its command line version `pvpython`. Then, in your shell, you can run
 ```shell
 pvpython m2000.py
 ```
@@ -21,3 +62,22 @@ All the figures are now ready and available in the following locations:
 2. RHD first Riemann problem: `paper_figures/rhd/density.pdf`
 3. Convergence analysis of isentropic vortex test for 2-D compressible Euler's equations: `paper_figures/isentropic_error.pdf`
 4. Density profile of Mach 2000 astrophysical jet flow: `paper_figures/m2000.png`.
+
+
+## Authors
+
+- [Arpit Babbar](https://arpit-babbar.github.io) (Johannes Gutenberg University Mainz, Germany)
+- [Valentin Churavy](https://vchuravy.dev) (Johannes Gutenberg University Mainz, Germany and University of Augsburg, Germany)
+- [Michael Schlottke-Lakemper](https://lakemper.eu) (University of Augsburg, Germany)
+- [Hendrik Ranocha](https://ranocha.de) (Johannes Gutenberg University Mainz, Germany)
+
+
+## License
+
+The code in this repository is published under the MIT license, see the
+`LICENSE` file.
+
+
+## Disclaimer
+
+Everything is provided as is and without warranty. Use at your own risk!
