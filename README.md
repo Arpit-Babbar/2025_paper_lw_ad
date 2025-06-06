@@ -33,7 +33,17 @@ repository as
 
 ## Abstract
 
-TODO
+Lax-Wendroff methods combined with discontinuous Galerkin/flux reconstruction spatial discretization
+provide a high-order, single-stage, quadrature-free method for solving hyperbolic conservation laws.
+In this work, we introduce automatic differentiation (AD) in the element-local time average flux
+computation step (the predictor step) of Lax-Wendroff methods. The application of AD is similar
+for methods of any order and does not need positivity corrections during the predictor step.
+This contrasts with the approximate Lax-Wendroff procedure, which requires different finite difference
+formulas for different orders of the method and positivity corrections in the predictor step for
+fluxes that can only be computed on admissible states. The method is Jacobian-free and problem-independent,
+allowing direct application to any physical flux function. Numerical experiments demonstrate the order
+and positivity preservation of the method. Additionally, performance comparisons indicate that the
+wall-clock time of automatic differentiation is always on par with the approximate Lax-Wendroff method.
 
 
 ## Numerical experiments
