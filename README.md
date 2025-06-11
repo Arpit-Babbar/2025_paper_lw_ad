@@ -1,14 +1,14 @@
 # Automatic differentiation for Lax-Wendroff-type discretizations
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/TODO.svg)](https://zenodo.org/doi/TODO)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15607814.svg)](https://zenodo.org/doi/10.5281/zenodo.15607814)
 
 This repository contains information and code to reproduce the results
 presented in the article
 ```bibtex
 @online{babbar2025automatic,
   title={Automatic differentiation for {L}ax-{W}endroff-type discretizations},
-  author={TODO},
+  author={Babbar, Arpit and Churavy, Valentin and Schlottke-Lakemper, Michael and Ranocha,  Hendrik},
   year={2025},
   eprint={TODO},
   eprinttype={arxiv},
@@ -24,16 +24,26 @@ repository as
   title={Reproducibility repository for
          "Automatic differentiation for {L}ax-{W}endroff-type
          discretizations"},
-  author={TODO},
+  author={Babbar, Arpit and Churavy, Valentin and Schlottke-Lakemper, Michael and Ranocha,  Hendrik},
   year={2025},
   howpublished={\url{https://github.com/Arpit-Babbar/2025_paper_lw_ad}},
-  doi={TODO}
+  doi={10.5281/zenodo.15607814}
 }
 ```
 
 ## Abstract
 
-TODO
+Lax-Wendroff methods combined with discontinuous Galerkin/flux reconstruction spatial discretization
+provide a high-order, single-stage, quadrature-free method for solving hyperbolic conservation laws.
+In this work, we introduce automatic differentiation (AD) in the element-local time average flux
+computation step (the predictor step) of Lax-Wendroff methods. The application of AD is similar
+for methods of any order and does not need positivity corrections during the predictor step.
+This contrasts with the approximate Lax-Wendroff procedure, which requires different finite difference
+formulas for different orders of the method and positivity corrections in the predictor step for
+fluxes that can only be computed on admissible states. The method is Jacobian-free and problem-independent,
+allowing direct application to any physical flux function. Numerical experiments demonstrate the order
+and positivity preservation of the method. Additionally, performance comparisons indicate that the
+wall-clock time of automatic differentiation is always on par with the approximate Lax-Wendroff method.
 
 
 ## Numerical experiments
