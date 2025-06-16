@@ -8,9 +8,11 @@ presented in the article
 ```bibtex
 @online{babbar2025automatic,
   title={Automatic differentiation for {L}ax-{W}endroff-type discretizations},
-  author={Babbar, Arpit and Churavy, Valentin and Schlottke-Lakemper, Michael and Ranocha,  Hendrik},
+  author={Babbar, Arpit and Churavy, Valentin and Schlottke-Lakemper, Michael
+          and Ranocha,  Hendrik},
   year={2025},
-  eprint={TODO},
+  month={06},
+  eprint={2506.11719},
   eprinttype={arxiv},
   eprintclass={math.NA}
 }
