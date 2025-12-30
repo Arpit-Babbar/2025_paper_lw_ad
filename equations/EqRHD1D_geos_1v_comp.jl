@@ -7,7 +7,7 @@ module EqRHD1D_geos_1v_comp
 using Tenkai.DelimitedFiles
 using Tenkai.Plots
 using Tenkai.LinearAlgebra
-using Tenkai.UnPack
+using Tenkai.SimpleUnPack
 using Tenkai.Printf
 using Tenkai.TimerOutputs
 using Tenkai.StaticArrays
@@ -584,7 +584,7 @@ function compute_time_step(eq::RHD1D, problem, grid, aux, op, cfl, u1, ua)
       den = max(den, smax/dx[i])
    end
    dt = cfl / den
-   return dt
+   return dt, eq
 end
 
 #-------------------------------------------------------------------------------

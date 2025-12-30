@@ -20,7 +20,6 @@ trixi_include(joinpath("examples/run_isentropic_euler_double_rarefaction.jl"),
                        bound_limit = "no",
                        limiter = Tenkai.setup_limiter_none(),
                        compute_error_interval = 0)
-
 files = [joinpath(isentropic_ref_dir, "sol.txt"), joinpath(isentropic_dir, "sol.txt")]
 labels = ["Reference", "LW3"]
 
