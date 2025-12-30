@@ -3,7 +3,7 @@ module EqIsentropicEuler1D
 using Tenkai.DelimitedFiles
 using Tenkai.Plots
 using Tenkai.LinearAlgebra
-using Tenkai.UnPack
+using Tenkai.SimpleUnPack
 using Tenkai.Printf
 using Tenkai.TimerOutputs
 using Tenkai.StaticArrays
@@ -125,7 +125,7 @@ function compute_time_step(eq::IsentropicEuler1D, problem, grid, aux, op, cfl, u
         den = max(den, smax / dx[i])
     end
     dt = cfl / den
-    return dt
+    return dt, eq
 end
 
 function correct_variable_bound_limiter!(variable::typeof(density), eq::AbstractEquations{1},

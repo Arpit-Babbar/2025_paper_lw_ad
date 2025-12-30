@@ -584,7 +584,7 @@ function compute_time_step(eq::RHD1D, problem, grid, aux, op, cfl, u1, ua)
       den = max(den, smax/dx[i])
    end
    dt = cfl / den
-   return dt
+   return dt, eq
 end
 
 #-------------------------------------------------------------------------------
