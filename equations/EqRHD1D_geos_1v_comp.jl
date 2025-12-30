@@ -7,7 +7,7 @@ module EqRHD1D_geos_1v_comp
 using Tenkai.DelimitedFiles
 using Tenkai.Plots
 using Tenkai.LinearAlgebra
-using Tenkai.UnPack
+using Tenkai.SimpleUnPack
 using Tenkai.Printf
 using Tenkai.TimerOutputs
 using Tenkai.StaticArrays

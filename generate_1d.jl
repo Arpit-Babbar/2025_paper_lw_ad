@@ -11,6 +11,7 @@ mkpath(tenkaiad_data_dir)
 
 isentropic_dir = joinpath(tenkaiad_data_dir, "isentropic_euler_double_rarefaction")
 isentropic_ref_dir = joinpath(tenkaiad_data_dir, "isentropic_euler_double_rarefaction_ref")
+#=
 trixi_include("examples/run_isentropic_euler_double_rarefaction.jl", nx = 200, saveto = isentropic_dir)
 
 trixi_include(joinpath("examples/run_isentropic_euler_double_rarefaction.jl"),
@@ -20,7 +21,7 @@ trixi_include(joinpath("examples/run_isentropic_euler_double_rarefaction.jl"),
                        bound_limit = "no",
                        limiter = Tenkai.setup_limiter_none(),
                        compute_error_interval = 0)
-
+=#
 files = [joinpath(isentropic_ref_dir, "sol.txt"), joinpath(isentropic_dir, "sol.txt")]
 labels = ["Reference", "LW3"]
 
