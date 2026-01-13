@@ -69,11 +69,7 @@ ratio_fd, ratio_enzyme, ratio_lwtde = (trunc_float.(fd_arr_float ./ fd_arr_float
           trunc_float.(fd_arr_float ./ enzyme_arr_float),
           trunc_float.(fd_arr_float ./ lwtde_arr_float))
 
-push!(A, fd_arr_float, enzyme_arr_float, lwtde_arr_float)
-
 all_ratios = [ratio_fd..., ratio_enzyme..., ratio_lwtde...]
-
-push!(header, ("FD", "ADP", "ADE")...)
 
 get_wct_vec(; nx_array = [20, 40, 80, 160], degree = 4, solver = "lwtde")
 
