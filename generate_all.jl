@@ -1,5 +1,6 @@
 import Pkg
 Pkg.activate(joinpath(@__DIR__, "."))
+include("machine_code.jl")
 include("generate_1d.jl")
 include("generate_isentropic.jl")
 include("plotting/plot_convergence_degrees.jl") # Generate convergence plot

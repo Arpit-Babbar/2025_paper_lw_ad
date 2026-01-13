@@ -52,3 +52,18 @@ plot_solns(files, labels, outdir = joinpath(figures_dir, "rhd"),
             # plt_type = "cts_avg",
             exact_line_width = 2.5, soln_line_width = 2.5,
             colors = ["black", "red"])
+
+# Plot order versus wct for ForwardDiff, TaylorDiff and Enzyme
+forward_diff_data = readdlm("forward_diff_performance.txt")
+taylor_diff_data = readdlm("taylor_diff_performance.txt")
+enzyme_data = readdlm("enzyme_performance.txt")
+fig, ax = plt.subplots()
+ax.semilogy(forward_diff_data, label = "ForwardDiff", marker = :o)
+ax.semilogy(taylor_diff_data, label = "TaylorDiff", marker = :o)
+ax.semilogy(enzyme_data, label = "Enzyme", marker = :o)
+ax.set_xlabel("Order")
+ax.set_ylabel("Wall-clock time (s)")
+ax.set_title("AD Performance for \$ f(x) = \\sin(x) \$")
+ax.legend()
+ax.grid(true)
+fig.savefig("ad_performance.pdf")
