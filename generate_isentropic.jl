@@ -15,6 +15,7 @@ solver2string = Dict(
     LWEnzymeTower() => "enzyme_tower",
     "lwfr" => "fd",
     MDRKEnzymeTower() => "mdrk_ad",
+    LWTDEltWise() => "lwtde",
 )
 
 trixi_include_isentropic(; nx, ny, degree, run_number, solver,
@@ -33,9 +34,12 @@ nx = ny = 50
 degree = 1
 run_number = 1
 solver = LWEnzymeTower()
+solver2 = LWTDEltWise()
 trixi_include_isentropic(; nx, ny, degree, solver, run_number)
 
-for degree in [1, 2, 3, 4], nx in [20, 40, 80, 160], solver in ["lwfr", LWEnzymeTower()],
+for degree in [1, 2, 3, 4], nx in [20, 40, 80, 160], solver in [
+            "lwfr", LWEnzymeTower(),
+            LWTDEltWise()],
     run_number in 1:3
     trixi_include_isentropic(; nx, ny = nx, degree, solver, run_number)
 end
