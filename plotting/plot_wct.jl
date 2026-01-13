@@ -40,9 +40,12 @@ for degree in 1:4
     # efficient_arr = get_wct_vec(; nx_array, degree = "$degree", solver = "efficient")
     fd_arr = get_wct_vec(; nx_array, degree = degree, solver = "fd")
     enzyme_arr = get_wct_vec(; nx_array, degree = degree, solver = "enzyme_tower")
-    push!(A, fd_arr, enzyme_arr)
-    push!(header, ("ALW", "AD")...)
+    lwtde_arr = get_wct_vec(; nx_array, degree = degree, solver = "lwtde")
+    push!(A, fd_arr, enzyme_arr, lwtde_arr)
+    push!(header, ("FD", "ADP", "ADE")...)
 end
+
+get_wct_vec(; nx_array = [20, 40, 80, 160], degree = 4, solver = "lwtde")
 
 A = hcat(["20", "40", "80", "160"], A...)
 
