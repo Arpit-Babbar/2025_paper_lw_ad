@@ -69,7 +69,7 @@ ratio_fd, ratio_enzyme, ratio_lwtde = (trunc_float.(fd_arr_float ./ fd_arr_float
           trunc_float.(fd_arr_float ./ enzyme_arr_float),
           trunc_float.(fd_arr_float ./ lwtde_arr_float))
 
-all_ratios = [ratio_fd..., ratio_enzyme..., ratio_lwtde...]
+# all_ratios = [ratio_fd..., ratio_enzyme..., ratio_lwtde...]
 
 get_wct_vec(; nx_array = [20, 40, 80, 160], degree = 4, solver = "lwtde")
 
@@ -79,12 +79,6 @@ pretty_table(A, header = header, backend = Val(:latex))
 
 println("\nSpeedup ratios (FD over others) for finest grid (N=4, 160x160):")
 
-for i in eachindex(all_ratios)
-    print(" & ")
-    print(all_ratios[i])
-    # if i < length(all_ratios)
-
-    # else
-    #     println()
-    # end
+for i in 1:4
+    print(" & ", ratio_fd[i], " & ", ratio_enzyme[i], " & ", ratio_lwtde[i])
 end
