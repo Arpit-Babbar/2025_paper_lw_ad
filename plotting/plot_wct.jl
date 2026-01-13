@@ -82,3 +82,6 @@ println("\nSpeedup ratios (FD over others) for finest grid (N=4, 160x160):")
 for i in 1:4
     print(" & ", ratio_fd[i], " & ", ratio_enzyme[i], " & ", ratio_lwtde[i])
 end
+
+println("enzyme_ratios = ", str2float.(ratio_enzyme))
+println("lwtde_ratios = ", str2float.(ratio_lwtde))
