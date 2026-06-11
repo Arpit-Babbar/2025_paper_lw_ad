@@ -7,7 +7,8 @@ This repository contains information and code to reproduce the results
 presented in the article
 ```bibtex
 @article{babbar2026automatic,
-  title={Automatic differentiation for {L}ax-{W}endroff-type discretizations},
+  title={Automatic differentiation for performing the {C}auchy-{K}ovalevskaya
+         procedure in {L}ax-{W}endroff type discretizations},
   author={Babbar, Arpit and Churavy, Valentin and Schlottke-Lakemper, Michael
           and Ranocha,  Hendrik},
   journal={Journal of Computational Physics},
