@@ -1,4 +1,4 @@
-# Automatic differentiation for Lax-Wendroff-type discretizations
+# Automatic differentiation for performing the Cauchy-Kovalevskaya procedure in Lax-Wendroff type discretizations
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15607814.svg)](https://zenodo.org/doi/10.5281/zenodo.15607814)
